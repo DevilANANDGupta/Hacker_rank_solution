@@ -72,46 +72,31 @@ import sys
 #  2. INTEGER k
 #  3. INTEGER_ARRAY queries
 #
-
-def circularArrayRotation(a, k, queries):
-    # Write your code here
+def rightRotation(a, d):
     out = list(a)
     a_len = len(a)
     for ind, el in enumerate(a):
-        out[(ind + k) % a_len] = el
+        out[(ind + d) % a_len] = el
+
     return out
+
+def circularArrayRotation(a, m):
     out = []
-    for pos in queries:
+    for pos in m:
         out.append(a[pos])
-
+        
     return out
+    
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    first_multiple_input = input().rstrip().split()
-
-    n = int(first_multiple_input[0])
-
-    k = int(first_multiple_input[1])
-
-    q = int(first_multiple_input[2])
-
-    a = list(map(int, input().rstrip().split()))
-
-    queries = []
-
-    for _ in range(q):
-        queries_item = int(input().strip())
-        queries.append(queries_item)
-
-    result = circularArrayRotation(a, k, queries)
-
-    fptr.write('\n'.join(map(str, result)))
-    fptr.write('\n')
-
-    fptr.close()
-
-
-
-
+if __name__ == "__main__":
+    n, k, q = input().strip().split(' ')
+    n, k, q = [int(n), int(k), int(q)]
+    a = list(map(int, input().strip().split(' ')))
+    m = []
+    m_i = 0
+    for m_i in range(q):
+        m_t = int(input().strip())
+        m.append(m_t)
+    a = rightRotation(a, k)
+    result = circularArrayRotation(a, m)
+    print ("\n".join(map(str, result)))
