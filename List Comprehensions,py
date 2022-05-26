@@ -1,0 +1,132 @@
+'''Let's learn about list comprehensions! You are given three integers  and  representing the dimensions of a cuboid along with an integer . Print a list of all possible coordinates given by  on a 3D grid where the sum of  is not equal to . Here, . Please use list comprehensions rather than multiple loops, as a learning exercise.
+
+Example
+
+
+
+
+All permutations of  are:
+.
+
+Print an array of the elements that do not sum to .
+
+
+Input Format
+
+Four integers  and , each on a separate line.
+
+Constraints
+
+Print the list in lexicographic increasing order.
+
+Sample Input 0
+
+1
+1
+1
+2
+Sample Output 0
+
+[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
+Explanation 0
+
+Each variable  and  will have values of  or . All permutations of lists in the form .
+Remove all arrays that sum to  to leave only the valid permutations.
+
+Sample Input 1
+
+2
+2
+2
+2
+Sample Output 1
+
+[[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 2], [0, 2, 1], [0, 2, 2], [1, 0, 0], [1, 0, 2], [1, 1, 1], [1, 1, 2], [1, 2, 0], [1, 2, 1], [1, 2, 2], [2, 0, 1], [2, 0, 2], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, 2, 0], [2, 2, 1], [2, 2, 2]]
+Language
+Python 3
+
+
+More
+1234567
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+
+    print(list([i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1)  if i+j+k !=n))
+Line: 7 Col: 99
+
+Submit Code
+
+Run Code
+
+Upload Code as File
+
+Test against custom input
+Python
+You have earned 10.00 points!
+You are now 95 points away from the 4th star for your python badge.
+14%125/220
+Congratulations
+You solved this challenge. Would you like to challenge your friends?Share on FacebookShare on TwitterShare on LinkedIn
+Next Challenge
+
+Test case 0
+
+Test case 1
+
+Test case 2
+
+Test case 3
+
+Test case 4
+
+Test case 5
+
+Test case 6
+
+Test case 7
+
+Test case 8
+
+Test case 9
+Compiler Message
+Success
+Input (stdin)
+
+Download
+1
+1
+1
+2
+Expected Output
+
+Download
+[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
+Authorharsh_beria93
+DifficultyEasy
+Max Score10
+Submitted By554390
+NEED HELP?
+View tutorial
+View discussions
+View editorial
+View top submissions
+RATE THIS CHALLENGE
+
+MORE DETAILS
+Download problem statement
+Download sample test cases
+Suggest Edits
+Share on FacebookShare on Twitter'''
+
+SOLUTIONS============================================================================================================================================================
+
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+
+    print(list([i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1)  if i+j+k !=n))
