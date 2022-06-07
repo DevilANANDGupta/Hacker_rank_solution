@@ -9,6 +9,7 @@ The attendee data is aligned for clarity below:
 10101
 11110
 00010
+
 These are all possible teams that can be formed:
 
 Members Subjects
